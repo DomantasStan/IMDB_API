@@ -1,7 +1,7 @@
 # IMDB_API
 
 ## What does this API do ?
-This api retrieves 250 top rated movies from IMDB using RAPID API. Saves movie data (id, rating, title, genres) and unique genres of the movies to specified database. Then using endpoints user can get data of top 250 movies by genre ordered by rating from highest to lowest.
+This api retrieves and every week updates 250 top rated movies from IMDB using RAPID API. Saves movie data (id, rating, title, genres) and unique genres of the movies to specified database. Then using endpoints user can get data of top 250 movies by genre ordered by rating from highest to lowest.
 
 ## How to use this api ?
 ### Prerequisites
@@ -16,8 +16,10 @@ After project is set up user can start a project by clicking 'Start' button in V
 ### Using the api
 IMDB API has two endpoints:
 
+User can use endpoints using SwaggerUI which opens in a browser window after starting the api or by sending requests using links specified below.
+
 GetUniqueGenres: takes no arguuments and returns a list of unique genres of the top 250 IMDB movies. This data should help user to pick wanted genre for the movies.
 Request example: http://localhost:5029/api/Movie/GetUniqueGenres
 
-GetMoviesByGenre: takes one argument genre. Genre can be picked from a list of unique genres described above. User can filter movies by one genre at the time. This endpoint returns a list of movies which fit to a picked genre. Movie information: id, rating, title, genres. Results are sorted by rating from highest to lowest.
+GetMoviesByGenre: takes one argument: genre. Genre can be picked from a list of unique genres described above. User can filter movies by one genre at the time. This endpoint returns a list of movies which fit to a picked genre. Movie information: id, rating, title, genres. Results are sorted by rating from highest to lowest.
 Request example: http://localhost:5029/api/Movie/GetMoviesByGenre/Comedy
