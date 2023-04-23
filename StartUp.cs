@@ -15,6 +15,11 @@ namespace IMDB_API
             this.connectionString = connectionString;
         }
 
+        public void PrintTest(int count)
+        {
+            Console.WriteLine("Test " + count);
+        }
+
         // Removes unnecessary data from id value
         public string parseString(string id)
         {
@@ -70,7 +75,7 @@ namespace IMDB_API
             string sql = "CREATE TABLE IF NOT EXISTS movie_ratings (id VARCHAR(255) NOT NULL," +
                 " rating double(2,1) DEFAULT NULL, title VARCHAR(255) DEFAULT NULL, genre VARCHAR(255) DEFAULT NULL);" +
                 "\r\nCREATE TABLE IF NOT EXISTS genres (title VARCHAR(255) NOT NULL);" +
-                "\r\nALTER TABLE `movie_ratings` ADD PRIMARY KEY (`id`);";
+                "\r\nALTER TABLE `movie_ratings` ADD PRIMARY KEY IF NOT EXISTS (`id`);";
 
             await using var connection = new MySqlConnection(connectionString);
             await connection.OpenAsync();
