@@ -19,5 +19,5 @@ IMDB API has two endpoints:
 GetUniqueGenres: takes no arguuments and returns a list of unique genres of the top 250 IMDB movies. This data should help user to pick wanted genre for the movies.
 Request example: http://localhost:5029/api/Movie/GetUniqueGenres
 
-GetMoviesByGenre: takes one argument genre. Genre can be picked from a list of unique genres described above. User can filter movies by one genre at the time. This endpoint returns a list of movies which fit to a picked genre. Movie information: id, rating, title, genres. Results are sorted by rating from highest to lowest.
+GetMoviesByGenre: takes one argument: genre. Genre can be picked from a list of unique genres described above. User can filter movies by one genre at the time. This endpoint returns a list of movies which fit to a picked genre. Movie information: id, rating, title, genres. Results are sorted by rating from highest to lowest.
 Request example: http://localhost:5029/api/Movie/GetMoviesByGenre/Comedy
