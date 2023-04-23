@@ -57,6 +57,11 @@ namespace IMDB_API.Controllers
                     reader.GetValue(2).ToString(), reader.GetValue(3).ToString()));
             }
 
+            if (moviesRatings.Count < 1)
+            {
+                return NotFound("There are no movies for the specified genre of yours");
+            }
+
             return Ok(moviesRatings);
         }
     }
