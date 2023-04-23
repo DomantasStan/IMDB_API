@@ -1,14 +1,9 @@
-using IMDB_API.Data;
 using IMDB_API.Controllers;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 using IMDB_API;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddDbContext<MovieContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("MovieCS")));
 
 builder.Services.AddTransient<MySqlConnection>(_ =>
     new MySqlConnection(builder.Configuration.GetConnectionString("MovieCS")));
