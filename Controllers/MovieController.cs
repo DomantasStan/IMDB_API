@@ -17,6 +17,7 @@ namespace IMDB_API.Controllers
         }
 
         [HttpGet]
+        [Route("GetUniqueGenres")]
         public async Task<IActionResult> getGenres()
         {
             using var connection = new MySqlConnection(connectionString);
@@ -38,7 +39,7 @@ namespace IMDB_API.Controllers
         }
 
         [HttpGet]
-        [Route("{genre}")]
+        [Route("GetMoviesByGenre/{genre}")]
         public async Task<IActionResult> getMovies([FromRoute] string genre)
         {
             using var connection = new MySqlConnection(connectionString);
