@@ -5,7 +5,7 @@ This api retrieves 250 top rated movies from IMDB using RAPID API. Saves movie d
 
 ## How to use this api ?
 ### Prerequisites
-This project was made and tested with Visual Studio Community 2022. Also user needs a database which name will be specified in the connectionString attribute.
+This project was developed and tested with Visual Studio Community 2022. Also user needs a database which name will be specified in the connectionString attribute.
 
 ### Setting up project
 Clone project to your machine and open it with 'IMDB_API.sln' file in projects directory. Once project is opened in Visual Studio user need to change connectionString attribute in appsettings.json located in main projects folder. User should only change value of 'MovieCS' attribute. Default value look like this: 'server=localhost;database=movies;user=root;password=' where server is your database server name, database is your database name, user is your database username, password is your database password. You do not need to create any tables in your database. Tables 'genres' and 'movie_ratings' will be created automatically.
