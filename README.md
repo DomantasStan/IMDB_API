@@ -16,6 +16,8 @@ After project is set up user can start a project by clicking 'Start' button in V
 ### Using the api
 IMDB API has two endpoints:
 
+User can use endpoints using SwaggerUI which opens in a browser window after starting the api or by sending requests using links specified below.
+
 GetUniqueGenres: takes no arguuments and returns a list of unique genres of the top 250 IMDB movies. This data should help user to pick wanted genre for the movies.
 Request example: http://localhost:5029/api/Movie/GetUniqueGenres
 
