@@ -15,11 +15,6 @@ namespace IMDB_API
             this.connectionString = connectionString;
         }
 
-        public void PrintTest(int count)
-        {
-            Console.WriteLine("Test " + count);
-        }
-
         // Removes unnecessary data from id value
         public string parseString(string id)
         {

@@ -27,13 +27,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-//MovieController movieController = new MovieController(builder.Configuration.GetConnectionString("MovieCS"));
-//StartUp start = new StartUp(builder.Configuration.GetConnectionString("MovieCS"));
-
-// To start the API we need to have data ready for user to use
-// This method takes data from an api and posts it to database
-// this should be used only the first time launching the api or when wanting to update the data
-start.PostTopMovies();
 
 app.UseAuthorization();
 
